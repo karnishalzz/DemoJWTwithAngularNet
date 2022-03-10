@@ -1,0 +1,81 @@
+<!-- Page content-->
+<div class="container-fluid position-relative zindex-5 pb-0 mb-md-1 p-3" style="margin-top: -15px;">
+    <div class="row">
+        <!-- Sidebar-->
+        <div class="col-lg-3 mb-4 mb-lg-0 p-1">
+            <app-web-side-menu></app-web-side-menu>
+        </div>
+        <!-- Content-->
+        <div class="col-lg-9 p-1">
+
+
+            <div class="row">
+                <div class="d-flex flex-column h-100 bg-grey rounded-1 shadow-lg p-4">
+                    <div class="pt-2 p-md-3">
+                        <!-- Title-->
+                        <h1 class="h3 mb-3 pb-2 text-center text-sm-start">Books </h1>
+                        <!-- Stats-->
+                        <div class="row mx-n2 py-2">
+                            <div class="col-md-12 col-sm-6 px-2 mb-3">
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title"></h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="section">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <ul class="list-inline">
+                                                        <li class="book " *ngFor="let item of openMatialList">
+                                                            <img [src]="baseUrl + item.CoverPath">
+                                                            <div class="media">
+                                                                <div class="media-body">
+                                                                    <h5 class="mt-0 mb-1">{{item.Title}}</h5>
+                                                                    {{item.CreatedOn
+                                                                    |
+                                                                    amFromUtc | amLocal |
+                                                                    amDateFormat :
+                                                                    'DD MMM,YYYY' }}
+                                                                    <a href="{{baseUrl + item.FilePath}}" target="blank"
+                                                                    class="btn btn-icon btn-outline-success mr-1 ml-3"
+                                                                    [placement]="'right'"
+                                                                    ngbTooltip="View"><i
+                                                                        class="ai-eye m-0"></i></a>
+                                                                </div>
+                                                               
+
+                                                            </div>
+                                                            <ngx-extended-pdf-viewer [src]="'baseUrl + item.FilePath'" height="80vh"></ngx-extended-pdf-viewer>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                               
+                            </div>
+
+
+                        </div>
+                        <!-- Charts-->
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+</div>

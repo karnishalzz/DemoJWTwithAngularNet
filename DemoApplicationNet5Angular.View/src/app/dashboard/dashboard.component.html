@@ -1,0 +1,167 @@
+<!-- Page content-->
+<div class="container-fluid position-relative zindex-5 pb-0 mb-md-1 p-3" style="margin-top: -15px;">
+    <div class="row">
+        <!-- Sidebar-->
+        <div class="col-lg-3 mb-4 mb-lg-0 p-1">
+            <app-web-side-menu></app-web-side-menu>
+        </div>
+        <!-- Content-->
+        <div class="col-lg-9 p-1">
+            <div class="row">
+                <div class="d-flex flex-column h-100 bg-grey rounded-1 shadow-lg p-4">
+                    <div class="pt-2 p-md-3">
+                        <!-- Title-->
+                        <!-- <h1 class="h3 mb-3 pb-2 text-center text-sm-start">Your sales / earnings</h1> -->
+                        <!-- Stats-->
+                        <div class="row mx-n2 py-2">
+                            <div class="col-md-3 col-sm-6 px-2 mb-3">
+                                <div class="bg-red h-100 rounded-3 p-4 text-center">
+                                    <!-- <h3 class="fs-sm fw-medium text-body">Earnings (before taxes)</h3> -->
+                                    <p class="h2 text-white mb-2">8</p>
+                                    <p class="fs-ms text-white mb-0">Enrolled Courses</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 px-2 mb-3">
+                                <div class="bg-blue h-100 rounded-3 p-4 text-center">
+                                    <p class="h2 text-white mb-2">7</p>
+                                    <p class="fs-ms text-white mb-0">Bookmarked Courses</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-12 px-2 mb-3">
+                                <div class="bg-purple h-100 rounded-3 p-4 text-center">
+                                    <p class="h2 text-white mb-2">9</p>
+                                    <p class="fs-ms text-white mb-0">My Achievements</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-12 px-2 mb-3">
+                                <div class="bg-orange h-100 rounded-3 p-4 text-center">
+                                    <p class="h2 text-white mb-2">1</p>
+                                    <p class="fs-ms text-white mb-0">My Exams</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Charts-->
+    
+                    </div>
+                </div>
+            </div>
+           
+          
+           
+            <div class="row">
+                <div class="d-flex flex-column h-100 bg-grey rounded-1 shadow-lg p-4">
+                    <div class="pt-2 p-md-3">
+                        <!-- Title-->
+                        <h1 class="h3 mb-3 pb-2 text-center text-sm-start">Learning Hour</h1>
+                        <!-- Stats-->
+                        <div class="row mx-n2 py-2">
+                            <div class="col-md-12 col-sm-6 px-2 mb-3">
+                                <tabset>
+                                    <tab heading="Materials" id="tab1" >
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h5 class="card-title">Recent Materials</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row" *ngFor="let item of openMatialList">
+                                                    <div class="bg-white rounded-3 p-4 text-left" >
+                                                        <!-- <h3 class="fs-sm fw-medium text-body">Earnings (before taxes)</h3> -->
+                                                        <p class="h2 mb-2">{{item.Title}}</p>
+                                                        <p class="fs-ms mb-0"><small><i
+                                                            class="icon feather icon-clock m-r-10"></i>{{item.CreatedOn
+                                                        |
+                                                        amFromUtc | amLocal |
+                                                        amDateFormat :
+                                                        'DD-MMM-YYYY hh:mm A' }}</small></p>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+    
+                                           
+                                        </div>
+                                    </tab>
+    
+                                    <tab heading="Exams" id="tab2" >
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h5 class="card-title">Recent Exams</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row" *ngFor="let item of openExamList">
+                                                    <div class="bg-white rounded-3 p-4 text-left" >
+                                                        <!-- <h3 class="fs-sm fw-medium text-body">Earnings (before taxes)</h3> -->
+                                                        <p class="h2 mb-2">8</p>
+                                                        <p class="fs-ms mb-0">Enrolled Courses</p>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+    
+                                           
+                                        </div>
+                                    </tab>
+    
+                                  
+                                </tabset>
+                                
+                            </div>
+                           
+                       
+                        </div>
+                        <!-- Charts-->
+    
+                    </div>
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="d-flex flex-column h-100 bg-grey rounded-1 shadow-lg p-4">
+                    <div class="pt-2 p-md-3">
+                        <!-- Title-->
+                        <h1 class="h3 mb-3 pb-2 text-center text-sm-start">My Courses</h1>
+                        <!-- Stats-->
+                        <div class="row mx-n2 py-2">
+                            <div class="col-md-4 col-sm-6 px-2 mb-3">
+                                <div class="bg-red rounded-3 p-4 text-center" style="height: 230px; width: 350px;">
+                                    <!-- <h3 class="fs-sm fw-medium text-body">Earnings (before taxes)</h3> -->
+                                    <p class="h2 text-white mb-2">7</p>
+                                    <p class="fs-ms text-white mb-0">Enrolled Courses</p>
+                                </div>
+                            </div>
+                           
+                       
+                        </div>
+                        <!-- Charts-->
+    
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="d-flex flex-column h-100 bg-grey rounded-1 shadow-lg p-4">
+                    <div class="pt-2 p-md-3">
+                        <!-- Title-->
+                        <h1 class="h3 mb-3 pb-2 text-center text-sm-start">Available Courses</h1>
+                        <!-- Stats-->
+                        <div class="row mx-n2 py-2">
+                            <div class="col-md-4 col-sm-6 px-2 mb-3">
+                                <div class="bg-red rounded-3 p-4 text-center" style="height: 230px; width: 350px;">
+                                    <!-- <h3 class="fs-sm fw-medium text-body">Earnings (before taxes)</h3> -->
+                                    <p class="h2 text-white mb-2">8</p>
+                                    <p class="fs-ms text-white mb-0">Enrolled Courses</p>
+                                </div>
+                            </div>
+                           
+                       
+                        </div>
+                        <!-- Charts-->
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+    </div>
+</div>

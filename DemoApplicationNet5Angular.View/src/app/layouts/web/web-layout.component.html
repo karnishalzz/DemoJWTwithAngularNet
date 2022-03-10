@@ -1,0 +1,93 @@
+<main class="page-wrapper">
+    <!-- Navbar (Solid background + shadow)-->
+    <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+    <header class="header navbar navbar-expand-lg navbar-light bg-light navbar-shadow navbar-sticky" data-scroll-header>
+        <div class="navbar-search bg-light">
+            <div class="container d-flex flex-nowrap align-items-center"><i class="ai-search fs-xl"></i>
+                <input class="form-control form-control-xl navbar-search-field" type="text" placeholder="Search site">
+                <div class="d-flex align-items-center"><span class="text-muted fs-xs d-none d-sm-inline">Close</span>
+                    <button class="btn-close p-2" type="button" data-bs-toggle="search"></button>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid px-0 px-xl-3">
+            <!-- <button class="navbar-toggler ms-n2 me-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#primaryMenu"><span class="navbar-toggler-icon"></span></button> -->
+
+            <a class="navbar-brand flex-shrink-0 order-lg-1 mx-auto ms-lg-0 pe-lg-2 me-lg-4" href="index.html"><img class="d-none d-lg-block" src="assets/img/logo/logo-dark.png" alt="Around" width="153"><img class="d-lg-none" src="assets/img/logo/logo-icon.png" alt="Around" width="58"></a>
+
+            <!-- <div class="d-flex align-items-center order-lg-3 ms-lg-auto">
+                <div class="navbar-tool"><a class="navbar-tool-icon-box me-lg-2" href="#" data-bs-toggle="search"><i
+              class="ai-search"></i></a></div>
+                <div class="d-lg-block d-none border-start me-4" style="height: 30px;"></div>
+                <div class="d-lg-block d-none text-nowrap"><a class="btn-social bs-outline bs-facebook me-2" href="#"><i
+              class="ai-facebook"></i></a><a class="btn-social bs-outline bs-twitter me-2" href="#"><i
+              class="ai-twitter"></i></a>
+                    <a class="btn-social bs-outline bs-instagram me-2" href="#"><i class="ai-instagram"></i></a><a class="btn-social bs-outline bs-pinterest" href="#"><i class="ai-pinterest"></i></a></div>
+            </div> -->
+            <div class="offcanvas offcanvas-collapse order-lg-2" id="primaryMenu">
+                <!-- <div class="offcanvas-header navbar-shadow">
+                    <h5 class="mt-1 mb-0">Menu</h5>
+                    <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+
+                   <ul #navbarContent class="navbar-nav">
+                        <ng-container *ngFor="let item of navigation">
+                            <app-nav-collapse *ngIf="item.type=='collapse'" [item]="item"></app-nav-collapse>
+                            <app-nav-item *ngIf="item.type=='item'" [item]="item"></app-nav-item>
+                        </ng-container>
+
+                    </ul>
+                </div> -->
+                <div class="offcanvas-footer justify-content-center border-top"><a class="btn-social bs-lg bs-outline bs-facebook me-3" href="#"><i class="ai-facebook"></i></a><a class="btn-social bs-lg bs-outline bs-twitter me-3" href="#"><i class="ai-twitter"></i></a><a class="btn-social bs-lg bs-outline bs-instagram me-3"
+                        href="#"><i class="ai-instagram"></i></a><a class="btn-social bs-lg bs-outline bs-pinterest" href="#"><i class="ai-pinterest"></i></a></div>
+            </div>
+        </div>
+    </header>
+    <!-- Page content-->
+    <!-- Hero-->
+    <app-title></app-title>
+    <router-outlet></router-outlet>
+</main>
+<!-- Footer-->
+<footer class="footer bg-dark pt-5 pt-md-6">
+    <div class="container-fluid pt-3 pb-0 pt-md-0 pb-md-3">
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="widget widget-light pb-2 mb-4">
+                    <h4 class="widget-title">Contacts</h4>
+                    <ul>
+                        <li><a class="widget-link" href="mailto:support@example.com"><i
+                  class="ai-mail fs-lg me-2"></i>amelie.chef@example.com</a></li>
+                        <li><a class="widget-link" href="tel:9107848015"><i class="ai-phone fs-lg me-2"></i>910-784-8015</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="widget widget-light pb-2 mb-4">
+                    <h4 class="widget-title">Follow</h4><a class="btn-social bs-outline bs-lg bs-light bs-facebook me-2" href="#"><i class="ai-facebook"></i></a><a class="btn-social bs-outline bs-lg bs-light bs-twitter me-2" href="#"><i class="ai-twitter"></i></a><a class="btn-social bs-outline bs-lg bs-light bs-instagram me-2"
+                        href="#"><i class="ai-instagram"></i></a><a class="btn-social bs-outline bs-lg bs-light bs-pinterest" href="#"><i class="ai-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="widget widget-light pb-3 mb-4">
+                    <h4 class="widget-title">Subscribe and never miss a post!</h4>
+                    <form class="subscription-form validate" action="https://studio.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;amp;id=29ca296126" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                        <div class="input-group flex-nowrap"><i class="ai-mail position-absolute top-50 translate-middle-y text-muted fs-base ms-3"></i>
+                            <input class="form-control rounded-start" type="email" name="EMAIL" placeholder="Your email" required>
+                            <button class="btn btn-primary" type="submit" name="subscribe">Subscribe*</button>
+                        </div>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input class="subscription-form-antispam" type="text" name="b_c7103e2c981361a6639545bd5_29ca296126" tabindex="-1">
+                        </div>
+                        <div class="form-text">*Subscribe to our newsletter to receive early discount offers, updates and new products info.</div>
+                        <div class="subscription-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <p class="fs-sm mb-3 order-md-1"><span class="text-light opacity-50 me-1">&copy; All rights reserved. Made
+        by</span><a class="nav-link-style nav-link-light" href="https://createx.studio/" target="_blank" rel="noopener">Createx Studio</a></p>
+    </div>
+</footer>
